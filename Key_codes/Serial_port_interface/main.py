@@ -36,9 +36,9 @@ lock = threading.Lock()
 
 class Serial_Port_App:
     def __init__(self):
-        self.serial_connection_flag = False
+        # self.serial_connection_flag = False
         self.ser = None
-        print(self.serial_connection_flag, " init")
+        # print(self.serial_connection_flag, " init")
 
     def list_serial_ports(self):
         self.port_list = list(serial.tools.list_ports.comports())
@@ -46,8 +46,8 @@ class Serial_Port_App:
 
     def open_serial_port(self, com_port, baundrate):
         self.ser = serial.Serial(com_port, baundrate)
-        self.serial_connection_flag = True
-        print(self.serial_connection_flag, "open")
+        # self.serial_connection_flag = True
+        # print(self.serial_connection_flag, "open")
         print(self.ser)
 
     def check_is_ser_open(self):

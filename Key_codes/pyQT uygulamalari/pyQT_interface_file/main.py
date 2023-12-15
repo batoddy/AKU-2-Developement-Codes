@@ -415,13 +415,13 @@ class main(QMainWindow):
 
     def add_images_manually(self):
         self.yrt_logo_pixmap = QPixmap(
-            "C:/Users/batuh/OneDrive/Masaüstü/Yildiz Roket/AKU/AKU-2/Interface/pyQT uygulamalari/pyQT_interface_file/images/yrt_logo.png"
+            "Interface\Key_codes\pyQT uygulamalari\pyQT_interface_file\images\yrt_logo.png"
         )
         self.yrt_logo_2_pixmap = QPixmap(
-            "C:/Users/batuh/OneDrive/Masaüstü/Yildiz Roket/AKU/AKU-2/Interface/pyQT uygulamalari/pyQT_interface_file/images/yrt_logo_2.png"
+            "Interface\Key_codes\pyQT uygulamalari\pyQT_interface_file\images\yrt_logo_2.png"
         )
         self.aku_patch_pixmap = QPixmap(
-            "C:/Users/batuh/OneDrive/Masaüstü/Yildiz Roket/AKU/AKU-2/Interface/pyQT uygulamalari/pyQT_interface_file/images/aku_patch.png"
+            "Interface\Key_codes\pyQT uygulamalari\pyQT_interface_file\images\aku_patch.png"
         )
 
         self.qtui.yrt_logo_lbl.setPixmap(self.yrt_logo_pixmap.scaled(202, 180))
