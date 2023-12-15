@@ -1,10 +1,4 @@
 import tkinter as tk
-import matplotlib.pyplot as plt
-from matplotlib.figure import Figure
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from matplotlib import style
-import serial
-import sys
 
 # -------------Defines------------------------
 bg_color = "#1A1A1A"
@@ -15,48 +9,48 @@ com_port = "COM6"
 
 
 # -------------Data Set Code---------------
-class dataSet:
-    def __init__(self, data_set):
-        try:
-            self.system_time = data_set[0]
-            self.altitude = data_set[1]
-            self.pressure = data_set[2]
-            self.velocity = data_set[3]
-            self.accel_x = data_set[4]
-            self.accel_y = data_set[5]
-            self.accel_z = data_set[6]
-            self.gyro_x = data_set[7]
-            self.gyro_y = data_set[8]
-            self.gyro_z = data_set[9]
-            self.yaw = data_set[10]
-            self.pitch = data_set[11]
-            self.roll = data_set[12]
-        except:
-            print("Data can't be wrote to variables!!")
-
-    def print_to_terminal(self):
-        try:
-            print(
-                f"Time: {self.system_time}, Altitude: {self.altitude}, Pressure: {self.pressure}, Velocity: {self.velocity}, Accel_X: {self.accel_x}, Accel_Y: {self.accel_y}, Accel_Z: {self.accel_z}, Gyro_X: {self.gyro_x}, Gyro_Y: {self.gyro_y}, Gyro_Z: {self.gyro_z}, Yaw: {self.yaw}, Pitch: {self.pitch}, Roll: {self.roll}"
-            )
-        except:
-            print("-------------- Corrupted Data --------------")
+# class dataSet:
+#    def __init__(self, data_set):
+#        try:
+#            self.system_time = data_set[0]
+#            self.altitude = data_set[1]
+#            self.pressure = data_set[2]
+#            self.velocity = data_set[3]
+#            self.accel_x = data_set[4]
+#            self.accel_y = data_set[5]
+#            self.accel_z = data_set[6]
+#            self.gyro_x = data_set[7]
+#            self.gyro_y = data_set[8]
+#            self.gyro_z = data_set[9]
+#            self.yaw = data_set[10]
+#            self.pitch = data_set[11]
+#            self.roll = data_set[12]
+#        except:
+#            print("Data can't be wrote to variables!!")
+#
+#    def print_to_terminal(self):
+#        try:
+#            print(
+#                f"Time: {self.system_time}, Altitude: {self.altitude}, Pressure: {self.pressure}, Velocity: {self.velocity}, Accel_X: {self.accel_x}, Accel_Y: {self.accel_y}, Accel_Z: {self.accel_z}, Gyro_X: {self.gyro_x}, Gyro_Y: {self.gyro_y}, Gyro_Z: {self.gyro_z}, Yaw: {self.yaw}, Pitch: {self.pitch}, Roll: {self.roll}"
+#            )
+#        except:
+#            print("-------------- Corrupted Data --------------")
 
 
 # -------------Serial Read Code---------------
-def openSerial():
-    try:
-        ser = serial.Serial(com_port, 115200)
-        return ser
-    except:
-        print(f'{com_port} can"t opened!!! ')
-        # sys.exit()
-
-
-def readSerial():
-    ser = openSerial()
-    data_set = ser.readline()[:-1].decode("latin1").split(",")
-    return data_set
+# def openSerial():
+#    try:
+#        ser = serial.Serial(com_port, 115200)
+#        return ser
+#    except:
+#        print(f'{com_port} can"t opened!!! ')
+#        # sys.exit()
+#
+#
+# def readSerial():
+#    ser = openSerial()
+#    data_set = ser.readline()[:-1].decode("latin1").split(",")
+#    return data_set
 
 
 # -------------Main GUI code---------------
@@ -136,37 +130,37 @@ def add_labels():
     # ------------------Time data labels------------------
 
     system_time_lbl_1 = tk.Label(
-        master=state_flag_data_frame, text="System Time: ", bg=bg_color, fg=txt_color
+        master=time_data_frame, text="System Time: ", bg=bg_color, fg=txt_color
     )
     system_time_lbl_1.config(font=(txt_font, 12))
     system_time_lbl_1.grid(row=1, column=1, sticky="w")
 
     system_time_lbl_2 = tk.Label(
-        master=state_flag_data_frame, text="NaN", bg=bg_color, fg=txt_color
+        master=time_data_frame, text="NaN", bg=bg_color, fg=txt_color
     )
     system_time_lbl_2.config(font=(txt_font, 12))
     system_time_lbl_2.grid(row=1, column=2, sticky="w")
 
     Flight_time_l_lbl_1 = tk.Label(
-        master=state_flag_data_frame, text="Flight Time: ", bg=bg_color, fg=txt_color
+        master=time_data_frame, text="Flight Time: ", bg=bg_color, fg=txt_color
     )
     Flight_time_l_lbl_1.config(font=(txt_font, 12))
     Flight_time_l_lbl_1.grid(row=2, column=1, sticky="w")
 
     Flight_time_l_lbl_2 = tk.Label(
-        master=state_flag_data_frame, text="NaN", bg=bg_color, fg=txt_color
+        master=time_data_frame, text="NaN", bg=bg_color, fg=txt_color
     )
     Flight_time_l_lbl_2.config(font=(txt_font, 12))
     Flight_time_l_lbl_2.grid(row=2, column=2, sticky="w")
 
     apogee_time_lbl_1 = tk.Label(
-        master=state_flag_data_frame, text="Apogee Time: ", bg=bg_color, fg=txt_color
+        master=time_data_frame, text="Apogee Time: ", bg=bg_color, fg=txt_color
     )
     apogee_time_lbl_1.config(font=(txt_font, 12))
     apogee_time_lbl_1.grid(row=3, column=1, sticky="w")
 
     apogee_time_lbl_2 = tk.Label(
-        master=state_flag_data_frame, text="NaN", bg=bg_color, fg=txt_color
+        master=time_data_frame, text="NaN", bg=bg_color, fg=txt_color
     )
     apogee_time_lbl_2.config(font=(txt_font, 12))
     apogee_time_lbl_2.grid(row=3, column=2, sticky="w")
@@ -174,25 +168,25 @@ def add_labels():
     # ------------------Telemetry data labels------------------
 
     pkg_no_lbl_1 = tk.Label(
-        master=state_flag_data_frame, text="Package No: ", bg=bg_color, fg=txt_color
+        master=telemetry_data_frame, text="Package No: ", bg=bg_color, fg=txt_color
     )
     pkg_no_lbl_1.config(font=(txt_font, 12))
     pkg_no_lbl_1.grid(row=1, column=1, sticky="w")
 
     pkg_no_lbl_2 = tk.Label(
-        master=state_flag_data_frame, text="NaN", bg=bg_color, fg=txt_color
+        master=telemetry_data_frame, text="NaN", bg=bg_color, fg=txt_color
     )
     pkg_no_lbl_2.config(font=(txt_font, 12))
     pkg_no_lbl_2.grid(row=1, column=2, sticky="w")
 
     data_rate_lbl_1 = tk.Label(
-        master=state_flag_data_frame, text="Data rate(ms): ", bg=bg_color, fg=txt_color
+        master=telemetry_data_frame, text="Data rate(ms): ", bg=bg_color, fg=txt_color
     )
     data_rate_lbl_1.config(font=(txt_font, 12))
     data_rate_lbl_1.grid(row=2, column=1, sticky="w")
 
     data_rate_lbl_2 = tk.Label(
-        master=state_flag_data_frame, text="NaN", bg=bg_color, fg=txt_color
+        master=telemetry_data_frame, text="NaN", bg=bg_color, fg=txt_color
     )
     data_rate_lbl_2.config(font=(txt_font, 12))
     data_rate_lbl_2.grid(row=2, column=2, sticky="w")
@@ -202,35 +196,35 @@ def add_labels():
     # ------------------Flight data labels------------------
 
     altitude_lbl_1 = tk.Label(
-        master=state_flag_data_frame, text="Altitude: ", bg=bg_color, fg=txt_color
+        master=flight_data_frame, text="Altitude: ", bg=bg_color, fg=txt_color
     )
     altitude_lbl_1.config(font=(txt_font, 12))
     altitude_lbl_1.grid(row=1, column=1, sticky="w")
 
     altitude_lbl_2 = tk.Label(
-        master=state_flag_data_frame, text="NaN", bg=bg_color, fg=txt_color
+        master=flight_data_frame, text="NaN", bg=bg_color, fg=txt_color
     )
     altitude_lbl_2.config(font=(txt_font, 12))
     altitude_lbl_2.grid(row=1, column=2, sticky="w")
 
     velocity_lbl_1 = tk.Label(
-        master=state_flag_data_frame, text="Velocirty: ", bg=bg_color, fg=txt_color
+        master=flight_data_frame, text="Velocirty: ", bg=bg_color, fg=txt_color
     )
     velocity_lbl_1.config(font=(txt_font, 12))
     velocity_lbl_1.grid(row=2, column=1, sticky="w")
 
     velocity_lbl_2 = tk.Label(
-        master=state_flag_data_frame, text="NaN", bg=bg_color, fg=txt_color
+        master=flight_data_frame, text="NaN", bg=bg_color, fg=txt_color
     )
     velocity_lbl_2.config(font=(txt_font, 12))
     velocity_lbl_2.grid(row=1, column=2, sticky="w")
 
 
 add_labels()
-openSerial()
+# openSerial()
 
 while 1:
-    data_set = readSerial()
-    ds = dataSet(data_set)
+    #  data_set = readSerial()
+    # ds = dataSet(data_set)
     # ds.print_to_terminal()
     root.mainloop()

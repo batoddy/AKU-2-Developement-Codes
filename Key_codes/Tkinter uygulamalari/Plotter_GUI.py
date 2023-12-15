@@ -215,6 +215,7 @@ canvas4 = FigureCanvasTkAgg(fig, master=velocity2_plot_frame)
 canvas4.draw()
 canvas4.get_tk_widget().pack()
 
+
 # scrolled_text = ScrolledText(master = raw_data_flow_frame)
 # i = 0
 # i += 1

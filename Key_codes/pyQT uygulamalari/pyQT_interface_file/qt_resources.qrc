@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="images">
+    <file>images/aku_patch.png</file>
+    <file>images/yrt_logo.png</file>
+    <file>images/yrt_logo_2.png</file>
+  </qresource>
+</RCC>
