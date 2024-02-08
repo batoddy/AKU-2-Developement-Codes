@@ -1,0 +1,29 @@
+/*
+ * aku_config.h
+ *
+ *  Created on: Jan 30, 2024
+ *      Author: Batuhan
+ */
+
+#ifndef INC_AKU_CONFIG_H_
+#define INC_AKU_CONFIG_H_
+
+#include "tim.h"
+#include "i2c.h"
+
+
+#define SYSTEM_TIMER &htim1
+#define DELAY_TIMER &htim6 //timer to use at delay func.
+
+//------ IMU Device Defines ------
+#define IMU_I2C &hi2c1
+#define IMU_ADDR 0x28
+#define IMU_CHIP_ID 0xA0
+#define IMU_CHIP_ID_ADDR 0x00
+#define IMU_OFFSET_VAL 250
+#define IMU_EMPTY_REG_VAL 250
+#define SET_OFFSET 0		// 1 for offsetting, 0 for not-offsetting
+#define SYS_STATUS_REG
+#define SYS_ERR_REG
+
+#endif /* INC_AKU_CONFIG_H_ */

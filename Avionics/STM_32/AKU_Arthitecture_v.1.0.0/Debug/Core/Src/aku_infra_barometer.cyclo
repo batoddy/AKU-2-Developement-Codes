@@ -1,0 +1,7 @@
+aku_infra_barometer.c:39:6:config_barometer	1
+aku_infra_barometer.c:46:6:read_barometer_data	1
+aku_infra_barometer.c:54:6:get_base_pressure	2
+aku_infra_barometer.c:67:6:empty_barometer_registers	2
+aku_infra_barometer.c:79:6:init_Barometer	1
+aku_infra_barometer.c:86:7:calculateAltitude	1
+aku_infra_barometer.c:94:11:read_Barometer	2

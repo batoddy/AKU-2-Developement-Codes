@@ -1,0 +1,11 @@
+yrt_ms5611.c:26:6:ms5611_config	1
+yrt_ms5611.c:34:6:ms5611_i2c_write_byte	1
+yrt_ms5611.c:40:6:ms5611_i2c_read_byte	1
+yrt_ms5611.c:46:10:ms5611_i2c_read_word	1
+yrt_ms5611.c:54:10:ms5611_i2c_read_24bits	1
+yrt_ms5611.c:69:5:ms5611_init	2
+yrt_ms5611.c:88:10:ms5611_read_rawTemp	1
+yrt_ms5611.c:94:10:ms5611_read_rawPress	1
+yrt_ms5611.c:100:6:ms5611_calculate	7
+yrt_ms5611.c:138:6:ms5611_getTemperatureAndPressure	1
+yrt_ms5611.c:148:6:ms5611_setOSR	5

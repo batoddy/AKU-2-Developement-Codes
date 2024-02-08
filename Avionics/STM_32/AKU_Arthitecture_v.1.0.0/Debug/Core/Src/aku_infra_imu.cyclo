@@ -1,0 +1,13 @@
+bno055_stm32.h:20:6:bno055_assignI2C	1
+bno055_stm32.h:24:6:bno055_delay	1
+bno055_stm32.h:32:6:bno055_writeData	23
+bno055_stm32.h:95:6:bno055_readData	1
+aku_infra_imu.c:44:6:imu_read_register	1
+aku_infra_imu.c:51:6:config_IMU	1
+aku_infra_imu.c:60:6:read_imu_data	1
+aku_infra_imu.c:96:6:init_IMU	2
+aku_infra_imu.c:108:6:read_IMU	2
+aku_infra_imu.c:136:6:empty_imu_registers	2
+aku_infra_imu.c:145:6:get_offset_data	2
+aku_infra_imu.c:186:9:check_imu_connection	1
+aku_infra_imu.c:194:9:check_imu_status	1

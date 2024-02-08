@@ -1,0 +1,20 @@
+/*
+ * aku_config.h
+ *
+ *  Created on: Jan 30, 2024
+ *      Author: Batuhan
+ */
+
+#ifndef INC_AKU_CONFIG_H_
+#define INC_AKU_CONFIG_H_
+
+#include "tim.h"
+#include "i2c.h"
+
+
+#define SYSTEM_TIMER &htim1
+#define DELAY_TIMER &htim6 //timer to use at delay func.
+
+
+
+#endif /* INC_AKU_CONFIG_H_ */

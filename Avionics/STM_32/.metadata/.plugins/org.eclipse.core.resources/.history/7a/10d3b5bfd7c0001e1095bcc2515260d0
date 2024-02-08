@@ -1,0 +1,13 @@
+/*
+ * aku_config.h
+ *
+ *  Created on: Jan 30, 2024
+ *      Author: Batuhan
+ */
+
+#ifndef INC_AKU_CONFIG_H_
+#define INC_AKU_CONFIG_H_
+
+#define DELAY_TIMER &htim6
+
+#endif /* INC_AKU_CONFIG_H_ */

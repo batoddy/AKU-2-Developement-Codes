@@ -1,0 +1,79 @@
+/*
+ * aku_infra_barometer.c
+ *
+ *  Created on: Feb 6, 2024
+ *      Author: Batuhan
+ */
+#include "main.h"
+#include "aku_config.h"
+#include "aku_structure.h"
+#include "aku_infrastructure.h"
+#include "aku_infra_imu.h"
+#include "math.h"
+// include imu library files:---------
+// -------------------- USER CODE 0 BEGIN ---------------------
+#include "yrt_ms5611.h"
+
+Altimeter_Device ms5611={
+	.i2c = &hi2c2,
+	.addr = 0x77,
+	.osr = 2,
+	.base_press_caliber_val = 250,
+	.empty_reg_val = 250
+};
+// --------------------- USER CODE 0 END ---------------------
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+static Altitude altitude;
+static Velocity velocity;
+
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+// -------------------- USER CODE 1 BEGIN ---------------------
+
+void config_altimeter(){
+	ms5611_config(ms5611.i2c,ms5611.addr,ms5611.osr,&aku_delay);
+	ms5611_init();
+	aku_delay(100);
+	empty_barometer_registers();
+	get_base_pressure();
+}
+
+void read_altimeter_data(float *temp, float*press, float*alt){
+	ms5611_getTemperatureAndPressure(temp,press,alt);
+}
+// --------------------- USER CODE 1 END ---------------------
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+
+void get_base_pressure(){
+	float alt,press,temp;
+
+	for (int i = 0; i < ms5611.base_press_caliber_val; i++){
+		read_altimeter_data(&temp,&press,&alt);
+		altitude.base_pressure += press;
+		aku_delay(2);
+	}
+	altitude.base_pressure /= ms5611.base_press_caliber_val;
+}
+
+void empty_barometer_registers()
+{
+	float alt,press,temp;
+	uint16_t ctr;
+	for (ctr = 0; ctr < ms5611.empty_reg_val; ctr++)
+
+	{
+		read_altimeter_data(&temp,&press,&alt);
+		aku_delay(2);
+	}
+}
+
+Altitude *read_Barometer(){
+	altitude.dataflow_rate = aku_chronometer(&altitude.tick);
+	ms5611_getTemperatureAndPressure(altitude.temperature, altitude.pressure, altitude.altitude)
+	return &altitude;
+}

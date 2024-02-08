@@ -1,0 +1,10 @@
+freertos.c:85:13:vApplicationStackOverflowHook	1
+freertos.c:97:6:vApplicationGetIdleTaskMemory	1
+freertos.c:111:6:MX_FREERTOS_Init	1
+freertos.c:174:6:Read_Sensor_Data_Task	1
+freertos.c:199:6:Flight_States_Task	1
+freertos.c:217:6:Servo_Control_Task	1
+freertos.c:239:6:DC_Motor_Control_Task	1
+freertos.c:257:6:Uart_to_LTC_Task	1
+freertos.c:275:6:Write_to_SD_Start	1
+freertos.c:293:6:System_Check_Start	1

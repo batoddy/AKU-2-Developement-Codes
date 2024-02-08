@@ -1,0 +1,14 @@
+/*
+ * aku_infrastructure.h
+ *
+ *  Created on: Feb 1, 2024
+ *      Author: Batuhan
+ */
+
+#ifndef INC_AKU_INFRASTRUCTURE_H_
+#define INC_AKU_INFRASTRUCTURE_H_
+
+void timer_init();
+void aku_delay(uint32_t delay);
+uint16_t aku_chronometer();
+#endif /* INC_AKU_INFRASTRUCTURE_H_ */

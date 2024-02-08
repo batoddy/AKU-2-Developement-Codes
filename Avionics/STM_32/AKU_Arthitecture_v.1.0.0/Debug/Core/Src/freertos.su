@@ -1,0 +1,10 @@
+../Core/Src/freertos.c:85:13:vApplicationStackOverflowHook	16	static
+../Core/Src/freertos.c:97:6:vApplicationGetIdleTaskMemory	24	static
+../Core/Src/freertos.c:111:6:MX_FREERTOS_Init	216	static
+../Core/Src/freertos.c:174:6:Read_Sensor_Data_Task	16	static
+../Core/Src/freertos.c:199:6:Flight_States_Task	16	static
+../Core/Src/freertos.c:217:6:Servo_Control_Task	16	static
+../Core/Src/freertos.c:239:6:DC_Motor_Control_Task	16	static
+../Core/Src/freertos.c:257:6:Uart_to_LTC_Task	16	static
+../Core/Src/freertos.c:275:6:Write_to_SD_Start	16	static
+../Core/Src/freertos.c:293:6:System_Check_Start	16	static

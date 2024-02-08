@@ -1,0 +1,140 @@
+2024-02-01 10:52:38,348 [WARN] IP:2113 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-02-01 10:52:38,558 [WARN] IP:2113 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-02-01 10:52:38,559 [WARN] IP:2113 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-02-01 10:52:38,559 [WARN] IP:2113 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-02-01 10:52:38,565 [WARN] IP:2113 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-02-01 10:52:38,566 [WARN] IP:2113 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-02-01 10:52:38,567 [WARN] IP:2113 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-02-01 10:52:38,567 [WARN] IP:2113 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-02-01 10:52:46,496 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-02-01 10:53:40,457 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-02-01 10:56:34,269 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-02-01 10:56:37,354 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 531274088 Bytes (1069547520)
+2024-02-01 10:56:40,015 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 554030944 Bytes (1069547520)
+2024-02-01 10:56:45,108 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 627571488 Bytes (1069547520)
+2024-02-01 10:56:48,477 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-02-01 10:56:48,478 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FREERTOS
+2024-02-01 10:56:48,479 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7
+2024-02-01 10:56:48,479 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-02-01 10:56:48,479 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-02-01 10:56:48,479 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-02-01 10:56:48,479 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-02-01 10:56:48,479 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-02-01 10:56:48,479 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-02-01 10:56:48,479 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-02-01 10:56:48,479 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-02-01 10:56:48,482 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-02-01 10:56:48,482 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FATFS
+2024-02-01 10:56:48,517 [INFO] CodeGenerator:793 - code generatio: config db path: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.0.202302231600\\db\
+2024-02-01 10:56:48,595 [WARN] IP:2113 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-02-01 10:56:48,595 [WARN] IP:2113 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-02-01 10:56:48,605 [WARN] IP:2113 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-02-01 10:56:48,605 [WARN] IP:2113 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-02-01 10:56:49,950 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\license.tmp_save
+2024-02-01 10:56:51,446 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\license.tmp
+2024-02-01 10:56:51,738 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\gpio.c_save
+2024-02-01 10:56:52,072 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\gpio.c
+2024-02-01 10:56:52,180 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\gpio.h_save
+2024-02-01 10:56:52,526 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\gpio.h
+2024-02-01 10:56:56,528 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-02-01 10:56:56,610 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_inc.tmp_save
+2024-02-01 10:56:59,100 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_inc.tmp
+2024-02-01 10:56:59,142 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_vars.tmp_save
+2024-02-01 10:56:59,787 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_vars.tmp
+2024-02-01 10:56:59,830 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_pfp.tmp_save
+2024-02-01 10:57:00,220 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_pfp.tmp
+2024-02-01 10:57:00,248 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_obj_creat.tmp_save
+2024-02-01 10:57:00,410 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_obj_creat.tmp
+2024-02-01 10:57:00,432 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_kernelStart.tmp_save
+2024-02-01 10:57:00,604 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_kernelStart.tmp
+2024-02-01 10:57:00,628 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_default_thread.tmp_save
+2024-02-01 10:57:00,782 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_default_thread.tmp
+2024-02-01 10:57:00,800 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_threads.tmp_save
+2024-02-01 10:57:00,961 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_threads.tmp
+2024-02-01 10:57:00,990 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-02-01 10:57:01,025 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_HalInit.tmp_save
+2024-02-01 10:57:01,243 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_HalInit.tmp
+2024-02-01 10:57:01,268 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_vars.tmp_save
+2024-02-01 10:57:01,476 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_vars.tmp
+2024-02-01 10:57:01,506 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_ext_vars.tmp_save
+2024-02-01 10:57:01,657 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_ext_vars.tmp
+2024-02-01 10:57:01,676 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_inc.tmp_save
+2024-02-01 10:57:01,791 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_inc.tmp
+2024-02-01 10:57:01,819 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-02-01 10:57:01,853 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_inc.tmp_save
+2024-02-01 10:57:02,025 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_inc.tmp
+2024-02-01 10:57:02,055 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_vars.tmp_save
+2024-02-01 10:57:02,187 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_vars.tmp
+2024-02-01 10:57:02,227 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_pfp.tmp_save
+2024-02-01 10:57:02,348 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_pfp.tmp
+2024-02-01 10:57:02,388 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_obj_creat.tmp_save
+2024-02-01 10:57:02,516 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_obj_creat.tmp
+2024-02-01 10:57:02,529 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_kernelStart.tmp_save
+2024-02-01 10:57:02,609 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_kernelStart.tmp
+2024-02-01 10:57:02,625 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_default_thread.tmp_save
+2024-02-01 10:57:02,716 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_default_thread.tmp
+2024-02-01 10:57:02,725 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_threads.tmp_save
+2024-02-01 10:57:02,804 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\rtos_threads.tmp
+2024-02-01 10:57:02,853 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\FreeRTOSConfig.h_save
+2024-02-01 10:57:02,996 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\FreeRTOSConfig.h
+2024-02-01 10:57:03,037 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\freertos.c_save
+2024-02-01 10:57:03,220 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\freertos.c
+2024-02-01 10:57:03,244 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-02-01 10:57:03,269 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_HalInit.tmp_save
+2024-02-01 10:57:03,427 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_HalInit.tmp
+2024-02-01 10:57:03,441 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_vars.tmp_save
+2024-02-01 10:57:03,578 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_vars.tmp
+2024-02-01 10:57:03,594 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_ext_vars.tmp_save
+2024-02-01 10:57:03,716 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_ext_vars.tmp
+2024-02-01 10:57:03,736 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_inc.tmp_save
+2024-02-01 10:57:03,852 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\fatfs_inc.tmp
+2024-02-01 10:57:03,915 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\FATFS\Target\ffconf.h_save
+2024-02-01 10:57:04,220 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\FATFS\Target\ffconf.h
+2024-02-01 10:57:04,294 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\FATFS\Target\user_diskio.c_save
+2024-02-01 10:57:04,511 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\FATFS\Target\user_diskio.c
+2024-02-01 10:57:04,551 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\FATFS\Target\user_diskio.h_save
+2024-02-01 10:57:04,702 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\FATFS\Target\user_diskio.h
+2024-02-01 10:57:04,741 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\FATFS\App\fatfs.c_save
+2024-02-01 10:57:04,929 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\FATFS\App\fatfs.c
+2024-02-01 10:57:04,962 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\FATFS\App\fatfs.h_save
+2024-02-01 10:57:05,094 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\FATFS\App\fatfs.h
+2024-02-01 10:57:05,148 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\i2c.c_save
+2024-02-01 10:57:05,418 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\i2c.c
+2024-02-01 10:57:05,469 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\i2c.h_save
+2024-02-01 10:57:05,641 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\i2c.h
+2024-02-01 10:57:05,709 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\spi.c_save
+2024-02-01 10:57:05,883 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\spi.c
+2024-02-01 10:57:05,898 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\spi.h_save
+2024-02-01 10:57:06,025 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\spi.h
+2024-02-01 10:57:06,064 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\tim.c_save
+2024-02-01 10:57:06,285 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\tim.c
+2024-02-01 10:57:06,313 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\tim.h_save
+2024-02-01 10:57:06,467 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\tim.h
+2024-02-01 10:57:06,511 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\usart.c_save
+2024-02-01 10:57:06,660 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\usart.c
+2024-02-01 10:57:06,672 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\usart.h_save
+2024-02-01 10:57:06,824 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\usart.h
+2024-02-01 10:57:06,892 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\stm32f4xx_it.c_save
+2024-02-01 10:57:07,069 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\stm32f4xx_it.c
+2024-02-01 10:57:07,105 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\stm32f4xx_it.h_save
+2024-02-01 10:57:07,311 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\stm32f4xx_it.h
+2024-02-01 10:57:07,395 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\stm32f4xx_hal_msp.c_save
+2024-02-01 10:57:07,642 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\stm32f4xx_hal_msp.c
+2024-02-01 10:57:07,671 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\system.tmp_save
+2024-02-01 10:57:07,901 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\MXTmpFiles\system.tmp
+2024-02-01 10:57:07,942 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2024-02-01 10:57:08,124 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\stm32f4xx_hal_timebase_tim.c
+2024-02-01 10:57:08,208 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-02-01 10:57:08,446 [INFO] CodeEngine:335 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\stm32f4xx_hal_conf.h
+2024-02-01 10:57:08,520 [WARN] IPConfigManager:2937 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2024-02-01 10:57:08,610 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\main.h_save
+2024-02-01 10:57:08,804 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Inc\main.h
+2024-02-01 10:57:08,839 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\main.c_save
+2024-02-01 10:57:09,049 [INFO] CodeEngine:279 - Generated code: C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\Core\Src\main.c
+2024-02-01 10:57:10,652 [INFO] ProjectBuilder:2996 - Time for Copy HAL[1] : 765mS.
+2024-02-01 10:57:10,697 [INFO] ProjectBuilder:4304 - Project Generator version: 3.19.2
+2024-02-01 10:57:11,543 [INFO] ConfigFileManager:1483 - The Die is : DIE421
+2024-02-01 10:57:11,560 [INFO] ApiDbMcu:507 - Load IP Config File for LIBJPEG
+2024-02-01 10:57:11,585 [INFO] ApiDbMcu:507 - Load IP Config File for MBEDTLS
+2024-02-01 10:57:11,608 [INFO] ApiDbMcu:507 - Load IP Config File for USB_DEVICE
+2024-02-01 10:57:11,622 [INFO] ApiDbMcu:507 - Load IP Config File for USB_HOST

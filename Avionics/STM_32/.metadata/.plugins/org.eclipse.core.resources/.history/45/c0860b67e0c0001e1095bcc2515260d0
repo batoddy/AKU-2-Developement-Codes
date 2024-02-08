@@ -1,0 +1,20 @@
+/*
+ * aku_infrastructure.c
+ *
+ *  Created on: Feb 1, 2024
+ *      Author: Batuhan
+ */
+#include "aku_config.h"
+#include "aku_infrastructure.h"
+#include "main.h"
+
+int batu = 0;
+
+void aku_delay(uint16_t delay){
+	__HAL_TIM_SET_COUNTER(DELAY_TIMER,0);
+	while(__HAL_TIM_GET_COUNTER(DELAY_TIMER) < delay){
+
+	}
+
+}
+
