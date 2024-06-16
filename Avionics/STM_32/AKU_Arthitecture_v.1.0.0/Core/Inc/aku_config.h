@@ -16,8 +16,14 @@
 
 #define USE_FREERTOS 1
 
+#define USE_UART 0
+#define USE_USB 1
+#define USE_CAN 1
+#define USE_SD 1
+#define USE_FLASH 0
+
 //------ IMU Device Defines ------
-#define IMU_I2C &hi2c1
+#define IMU_I2C &hi2c2
 #define IMU_ADDR 0x28
 #define IMU_CHIP_ID 0xA0
 #define IMU_CHIP_ID_ADDR 0x00
@@ -29,7 +35,7 @@
 
 //------ BAROMETER Device Defines ------
 
-#define BARO_I2C &hi2c2
+#define BARO_I2C &hi2c1
 #define BARO_ADDR 0x77
 #define BARO_OSR 2
 #define BARO_OFFSET_VAL 250

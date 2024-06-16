@@ -1,0 +1,117 @@
+/*
+ * aku_infra_barometer.c
+ *
+ *  Created on: Feb 6, 2024
+ *      Author: Batuhan
+ */
+#include "main.h"
+#include "aku_config.h"
+#include "aku_structure.h"
+#include "aku_infrastructure.h"
+#include "aku_infra_barometer.h"
+#include "math.h"
+// include imu library files:---------
+// -------------------- USER CODE 0 BEGIN ---------------------
+#include "yrt_ms5611.h"
+
+// --------------------- USER CODE 0 END ---------------------
+
+Barometer_Device ms5611 = {
+	.i2c = BARO_I2C,
+	.addr = BARO_ADDR,
+	.osr = BARO_OSR,
+	.base_press_caliber_val = BARO_OFFSET_VAL,
+	.empty_reg_val = BARO_EMPTY_REG_VAL};
+void config_barometer();
+void read_barometer_data(float *temp, float *press, float *alt);
+
+void get_base_pressure();
+void empty_barometer_registers();
+
+static Barometer_Data barometer_data;
+static Altitude altitude;
+static Velocity velocity;
+
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+// -------------------- USER CODE 1 BEGIN ---------------------
+
+void config_barometer()
+{
+	ms5611_config(ms5611.i2c, ms5611.addr, ms5611.osr, &aku_delay);
+	ms5611_init();
+	aku_delay(100);
+}
+
+void read_barometer_data(float *temp, float *press, float *alt)
+{
+	ms5611_getTemperatureAndPressure(temp, press, alt);
+}
+// --------------------- USER CODE 1 END ---------------------
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+
+void get_base_pressure()
+{
+	float alt, press, temp;
+
+	for (int i = 0; i < ms5611.base_press_caliber_val; i++)
+	{
+		read_barometer_data(&temp, &press, &alt);
+		altitude.base_pressure += press;
+		aku_delay(2);
+	}
+	altitude.base_pressure /= ms5611.base_press_caliber_val;
+}
+
+void empty_barometer_registers()
+{
+	float alt, press, temp;
+	uint16_t ctr ;
+	for (ctr = 0; ctr < ms5611.empty_reg_val; ctr++)
+
+	{
+		read_barometer_data(&temp, &press, &alt);
+		aku_delay(2);
+	}
+}
+
+void init_Barometer()
+{
+	config_barometer();
+	empty_barometer_registers();
+	get_base_pressure();
+}
+
+float calculateAltitude(float p, float pi)
+{
+	p = p / 100;
+	pi = pi / 100;
+	float alt = (44330 * (1.0 - pow(p / pi, 0.1903)));
+	return alt;
+}
+
+Altitude *read_Barometer()
+{
+	float temp_altitude;
+	altitude.prev_altitude = altitude.altitude;
+	altitude.prev_tick = altitude.tick;
+	altitude.prev_vertical_velocity = altitude.vertical_velocity;
+	altitude.dataflow_rate = aku_chronometer(&altitude.tick);
+	read_barometer_data(&altitude.temperature, &altitude.pressure, &temp_altitude);
+	altitude.altitude = calculateAltitude(altitude.pressure, altitude.base_pressure);
+
+	if (altitude.max_altitude < altitude.altitude)
+	{
+		altitude.max_altitude = altitude.altitude;
+		altitude.diff_to_max = altitude.max_altitude - altitude.altitude;
+	}
+
+	altitude.data_num++;
+	if (altitude.data_num >18446744073709551615-5)
+		altitude.data_num = 0;
+
+	altitude.vertical_velocity = (altitude.altitude-altitude.prev_altitude)/(altitude.tick-altitude.prev_tick);
+	altitude.vertical_accel = (altitude.vertical_velocity-altitude.prev_vertical_velocity)/(altitude.tick-altitude.prev_tick);
+	return (&altitude);
+}

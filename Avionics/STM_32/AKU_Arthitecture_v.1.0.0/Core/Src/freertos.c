@@ -51,14 +51,12 @@
 /* USER CODE BEGIN Variables */
 IMU* imu_ptr;
 Altitude* altitude_ptr;
+
+IMU* imu_ptr1;
+Altitude* altitude_ptr1;
 /* USER CODE END Variables */
 osThreadId Read_SensorDataHandle;
 osThreadId Flight_StatesHandle;
-osThreadId Servo_ControlHandle;
-osThreadId DC_Motor_ControHandle;
-osThreadId Uart_to_LTCHandle;
-osThreadId Write_to_SDHandle;
-osThreadId System_CheckHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -67,11 +65,6 @@ osThreadId System_CheckHandle;
 
 void Read_Sensor_Data_Task(void const * argument);
 void Flight_States_Task(void const * argument);
-void Servo_Control_Task(void const * argument);
-void DC_Motor_Control_Task(void const * argument);
-void Uart_to_LTC_Task(void const * argument);
-void Write_to_SD_Start(void const * argument);
-void System_Check_Start(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -135,28 +128,8 @@ void MX_FREERTOS_Init(void) {
   Read_SensorDataHandle = osThreadCreate(osThread(Read_SensorData), NULL);
 
   /* definition and creation of Flight_States */
-  osThreadDef(Flight_States, Flight_States_Task, osPriorityNormal, 0, 1024);
+  osThreadDef(Flight_States, Flight_States_Task, osPriorityHigh, 0, 1024);
   Flight_StatesHandle = osThreadCreate(osThread(Flight_States), NULL);
-
-  /* definition and creation of Servo_Control */
-  osThreadDef(Servo_Control, Servo_Control_Task, osPriorityHigh, 0, 1024);
-  Servo_ControlHandle = osThreadCreate(osThread(Servo_Control), NULL);
-
-  /* definition and creation of DC_Motor_Contro */
-  osThreadDef(DC_Motor_Contro, DC_Motor_Control_Task, osPriorityHigh, 0, 512);
-  DC_Motor_ControHandle = osThreadCreate(osThread(DC_Motor_Contro), NULL);
-
-  /* definition and creation of Uart_to_LTC */
-  osThreadDef(Uart_to_LTC, Uart_to_LTC_Task, osPriorityNormal, 0, 2048);
-  Uart_to_LTCHandle = osThreadCreate(osThread(Uart_to_LTC), NULL);
-
-  /* definition and creation of Write_to_SD */
-  osThreadDef(Write_to_SD, Write_to_SD_Start, osPriorityNormal, 0, 1024);
-  Write_to_SDHandle = osThreadCreate(osThread(Write_to_SD), NULL);
-
-  /* definition and creation of System_Check */
-  osThreadDef(System_Check, System_Check_Start, osPriorityNormal, 0, 512);
-  System_CheckHandle = osThreadCreate(osThread(System_Check), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -177,11 +150,12 @@ void Read_Sensor_Data_Task(void const * argument)
 	timer_init();
 	init_IMU();
 	init_Barometer();
+
   /* Infinite loop */
   for(;;)
   {
-	imu_ptr = read_IMU();
-	altitude_ptr = read_Barometer();
+		altitude_ptr = read_Barometer();
+		imu_ptr = read_IMU();
     osDelay(1);
   }
   /* USER CODE END Read_Sensor_Data_Task */
@@ -199,106 +173,14 @@ uint32_t tick;
 void Flight_States_Task(void const * argument)
 {
   /* USER CODE BEGIN Flight_States_Task */
+
   /* Infinite loop */
   for(;;)
   {
+
     osDelay(1);
   }
   /* USER CODE END Flight_States_Task */
-}
-
-/* USER CODE BEGIN Header_Servo_Control_Task */
-/**
-* @brief Function implementing the Servo_Control thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_Servo_Control_Task */
-void Servo_Control_Task(void const * argument)
-{
-  /* USER CODE BEGIN Servo_Control_Task */
-
-
-  /* Infinite loop */
-  for(;;)
-  {
-
-		a = aku_chronometer(&tick);
-    osDelay(1);
-  }
-  /* USER CODE END Servo_Control_Task */
-}
-
-/* USER CODE BEGIN Header_DC_Motor_Control_Task */
-/**
-* @brief Function implementing the DC_Motor_Contro thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_DC_Motor_Control_Task */
-void DC_Motor_Control_Task(void const * argument)
-{
-  /* USER CODE BEGIN DC_Motor_Control_Task */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END DC_Motor_Control_Task */
-}
-
-/* USER CODE BEGIN Header_Uart_to_LTC_Task */
-/**
-* @brief Function implementing the Uart_to_LTC thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_Uart_to_LTC_Task */
-void Uart_to_LTC_Task(void const * argument)
-{
-  /* USER CODE BEGIN Uart_to_LTC_Task */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END Uart_to_LTC_Task */
-}
-
-/* USER CODE BEGIN Header_Write_to_SD_Start */
-/**
-* @brief Function implementing the Write_to_SD thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_Write_to_SD_Start */
-void Write_to_SD_Start(void const * argument)
-{
-  /* USER CODE BEGIN Write_to_SD_Start */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END Write_to_SD_Start */
-}
-
-/* USER CODE BEGIN Header_System_Check_Start */
-/**
-* @brief Function implementing the System_Check thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_System_Check_Start */
-void System_Check_Start(void const * argument)
-{
-  /* USER CODE BEGIN System_Check_Start */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END System_Check_Start */
 }
 
 /* Private application code --------------------------------------------------*/

@@ -1,139 +1,55 @@
-14:40:38 **** Incremental Build of configuration Debug for project AKU_Arthitecture_v.1.0.0 ****
+18:48:22 **** Incremental Build of configuration Debug for project AKU2_GroundTest1_TARDIS2 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/aku_infra_barometer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/aku_infra_barometer.d" -MT"Core/Src/aku_infra_barometer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/aku_infra_barometer.o"
-arm-none-eabi-gcc "../Core/Src/aku_infra_imu.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/aku_infra_imu.d" -MT"Core/Src/aku_infra_imu.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/aku_infra_imu.o"
-arm-none-eabi-gcc "../Core/Src/aku_infrastructure.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/aku_infrastructure.d" -MT"Core/Src/aku_infrastructure.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/aku_infrastructure.o"
-arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
-../Core/Src/aku_infra_barometer.c: In function 'config_barometer':
-../Core/Src/aku_infra_barometer.c:41:53: warning: passing argument 4 of 'ms5611_config' from incompatible pointer type [-Wincompatible-pointer-types]
-   41 |  ms5611_config(ms5611.i2c, ms5611.addr, ms5611.osr, &aku_delay);
-      |                                                     ^~~~~~~~~~
-      |                                                     |
-      |                                                     void (*)(uint32_t) {aka void (*)(long unsigned int)}
-In file included from ../Core/Src/aku_infra_barometer.c:15:
-../Core/Inc/yrt_ms5611.h:53:84: note: expected 'void (*)(int)' but argument is of type 'void (*)(uint32_t)' {aka 'void (*)(long unsigned int)'}
-   53 | void ms5611_config(I2C_HandleTypeDef *i2c, uint8_t addr, uint8_t ms5611_osr, void(*delay_func)(int microsecond));
-      |                                                                              ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-At top level:
-../Core/Src/aku_infra_barometer.c:33:17: warning: 'velocity' defined but not used [-Wunused-variable]
-   33 | static Velocity velocity;
-      |                 ^~~~~~~~
-../Core/Src/aku_infra_barometer.c:31:23: warning: 'barometer_data' defined but not used [-Wunused-variable]
-   31 | static Barometer_Data barometer_data;
-      |                       ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "AKU_Arthitecture_v.1.0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AKU_Arthitecture_v.1.0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: AKU_Arthitecture_v.1.0.0.elf
+arm-none-eabi-gcc "../Core/Src/aku_infra_data.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -u_printf_float -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/aku_infra_data.d" -MT"Core/Src/aku_infra_data.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/aku_infra_data.o"
+../Core/Src/aku_infra_data.c: In function 'transmit_usb_data_eulerNservo':
+../Core/Src/aku_infra_data.c:34:19: warning: pointer targets in passing argument 1 of 'CDC_Transmit_FS' differ in signedness [-Wpointer-sign]
+   34 |   CDC_Transmit_FS(usb_data, strlen(usb_data));
+      |                   ^~~~~~~~
+      |                   |
+      |                   char *
+In file included from ../Core/Src/aku_infra_data.c:28:
+../USB_DEVICE/App/usbd_cdc_if.h:108:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  108 | uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
+      |                         ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "AKU2_GroundTest1_TARDIS2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU2_GroundTest1_TARDIS2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AKU2_GroundTest1_TARDIS2.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AKU2_GroundTest1_TARDIS2.elf
  
-arm-none-eabi-size   AKU_Arthitecture_v.1.0.0.elf 
-arm-none-eabi-objdump -h -S  AKU_Arthitecture_v.1.0.0.elf  > "AKU_Arthitecture_v.1.0.0.list"
+arm-none-eabi-size   AKU2_GroundTest1_TARDIS2.elf 
+arm-none-eabi-objdump -h -S  AKU2_GroundTest1_TARDIS2.elf  > "AKU2_GroundTest1_TARDIS2.list"
    text	   data	    bss	    dec	    hex	filename
-  48904	    192	  48952	  98048	  17f00	AKU_Arthitecture_v.1.0.0.elf
+ 102392	    912	  40936	 144240	  23370	AKU2_GroundTest1_TARDIS2.elf
 Finished building: default.size.stdout
  
-Finished building: AKU_Arthitecture_v.1.0.0.list
+Finished building: AKU2_GroundTest1_TARDIS2.list
  
-14:40:41 **** Incremental Build of configuration Debug for project AKU_Arthitecture_v.1.0.0 ****
+18:48:27 **** Incremental Build of configuration Debug for project AKU2_GroundTest1_TARDIS2 ****
 make -j8 all 
-arm-none-eabi-size   AKU_Arthitecture_v.1.0.0.elf 
+arm-none-eabi-size   AKU2_GroundTest1_TARDIS2.elf 
    text	   data	    bss	    dec	    hex	filename
-  48904	    192	  48952	  98048	  17f00	AKU_Arthitecture_v.1.0.0.elf
+ 102392	    912	  40936	 144240	  23370	AKU2_GroundTest1_TARDIS2.elf
 Finished building: default.size.stdout
  
-14:49:23 **** Incremental Build of configuration Debug for project AKU_Arthitecture_v.1.0.0 ****
+18:50:06 **** Incremental Build of configuration Debug for project AKU2_GroundTest1_TARDIS2 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/aku_infra_imu.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/aku_infra_imu.d" -MT"Core/Src/aku_infra_imu.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/aku_infra_imu.o"
-arm-none-eabi-gcc -o "AKU_Arthitecture_v.1.0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AKU_Arthitecture_v.1.0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: AKU_Arthitecture_v.1.0.0.elf
+arm-none-eabi-gcc "../Core/Src/aku_infra_data.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -u_printf_float -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/aku_infra_data.d" -MT"Core/Src/aku_infra_data.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/aku_infra_data.o"
+../Core/Src/aku_infra_data.c: In function 'transmit_usb_data_eulerNservo':
+../Core/Src/aku_infra_data.c:34:19: warning: pointer targets in passing argument 1 of 'CDC_Transmit_FS' differ in signedness [-Wpointer-sign]
+   34 |   CDC_Transmit_FS(usb_data, strlen(usb_data));
+      |                   ^~~~~~~~
+      |                   |
+      |                   char *
+In file included from ../Core/Src/aku_infra_data.c:28:
+../USB_DEVICE/App/usbd_cdc_if.h:108:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  108 | uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
+      |                         ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "AKU2_GroundTest1_TARDIS2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU2_GroundTest1_TARDIS2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AKU2_GroundTest1_TARDIS2.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AKU2_GroundTest1_TARDIS2.elf
  
-arm-none-eabi-size   AKU_Arthitecture_v.1.0.0.elf 
-arm-none-eabi-objdump -h -S  AKU_Arthitecture_v.1.0.0.elf  > "AKU_Arthitecture_v.1.0.0.list"
+arm-none-eabi-size   AKU2_GroundTest1_TARDIS2.elf 
+arm-none-eabi-objdump -h -S  AKU2_GroundTest1_TARDIS2.elf  > "AKU2_GroundTest1_TARDIS2.list"
    text	   data	    bss	    dec	    hex	filename
-  48904	    192	  48952	  98048	  17f00	AKU_Arthitecture_v.1.0.0.elf
+ 102392	    912	  40936	 144240	  23370	AKU2_GroundTest1_TARDIS2.elf
 Finished building: default.size.stdout
  
-Finished building: AKU_Arthitecture_v.1.0.0.list
- 
-14:50:42 **** Incremental Build of configuration Debug for project AKU_Arthitecture_v.1.0.0 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
-arm-none-eabi-gcc -o "AKU_Arthitecture_v.1.0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AKU_Arthitecture_v.1.0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: AKU_Arthitecture_v.1.0.0.elf
- 
-arm-none-eabi-size   AKU_Arthitecture_v.1.0.0.elf 
-arm-none-eabi-objdump -h -S  AKU_Arthitecture_v.1.0.0.elf  > "AKU_Arthitecture_v.1.0.0.list"
-   text	   data	    bss	    dec	    hex	filename
-  48904	    192	  48952	  98048	  17f00	AKU_Arthitecture_v.1.0.0.elf
-Finished building: default.size.stdout
- 
-Finished building: AKU_Arthitecture_v.1.0.0.list
- 
-14:53:44 **** Incremental Build of configuration Debug for project AKU_Arthitecture_v.1.0.0 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
-arm-none-eabi-gcc -o "AKU_Arthitecture_v.1.0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AKU_Arthitecture_v.1.0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: AKU_Arthitecture_v.1.0.0.elf
- 
-arm-none-eabi-size   AKU_Arthitecture_v.1.0.0.elf 
-arm-none-eabi-objdump -h -S  AKU_Arthitecture_v.1.0.0.elf  > "AKU_Arthitecture_v.1.0.0.list"
-   text	   data	    bss	    dec	    hex	filename
-  48904	    192	  48952	  98048	  17f00	AKU_Arthitecture_v.1.0.0.elf
-Finished building: default.size.stdout
- 
-Finished building: AKU_Arthitecture_v.1.0.0.list
- 
-14:54:30 **** Incremental Build of configuration Debug for project AKU_Arthitecture_v.1.0.0 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
-arm-none-eabi-gcc -o "AKU_Arthitecture_v.1.0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AKU_Arthitecture_v.1.0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: AKU_Arthitecture_v.1.0.0.elf
- 
-arm-none-eabi-size   AKU_Arthitecture_v.1.0.0.elf 
-arm-none-eabi-objdump -h -S  AKU_Arthitecture_v.1.0.0.elf  > "AKU_Arthitecture_v.1.0.0.list"
-   text	   data	    bss	    dec	    hex	filename
-  48904	    192	  48952	  98048	  17f00	AKU_Arthitecture_v.1.0.0.elf
-Finished building: default.size.stdout
- 
-Finished building: AKU_Arthitecture_v.1.0.0.list
- 
-14:54:55 **** Incremental Build of configuration Debug for project AKU_Arthitecture_v.1.0.0 ****
-make -j8 all 
-arm-none-eabi-size   AKU_Arthitecture_v.1.0.0.elf 
-   text	   data	    bss	    dec	    hex	filename
-  48904	    192	  48952	  98048	  17f00	AKU_Arthitecture_v.1.0.0.elf
-Finished building: default.size.stdout
- 
-14:55:22 **** Incremental Build of configuration Debug for project AKU_Arthitecture_v.1.0.0 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
-arm-none-eabi-gcc -o "AKU_Arthitecture_v.1.0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AKU_Arthitecture_v.1.0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: AKU_Arthitecture_v.1.0.0.elf
- 
-arm-none-eabi-size   AKU_Arthitecture_v.1.0.0.elf 
-arm-none-eabi-objdump -h -S  AKU_Arthitecture_v.1.0.0.elf  > "AKU_Arthitecture_v.1.0.0.list"
-   text	   data	    bss	    dec	    hex	filename
-  48904	    192	  48952	  98048	  17f00	AKU_Arthitecture_v.1.0.0.elf
-Finished building: default.size.stdout
- 
-Finished building: AKU_Arthitecture_v.1.0.0.list
- 
-14:56:23 **** Incremental Build of configuration Debug for project AKU_Arthitecture_v.1.0.0 ****
-make -j8 all 
-arm-none-eabi-size   AKU_Arthitecture_v.1.0.0.elf 
-   text	   data	    bss	    dec	    hex	filename
-  48904	    192	  48952	  98048	  17f00	AKU_Arthitecture_v.1.0.0.elf
-Finished building: default.size.stdout
- 
-15:01:48 **** Incremental Build of configuration Debug for project AKU_Arthitecture_v.1.0.0 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
-arm-none-eabi-gcc -o "AKU_Arthitecture_v.1.0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\batuh\OneDrive\Belgeler\AKU_2_batoddy\AKU-2-Developement-Codes\Avionics\STM_32\AKU_Arthitecture_v.1.0.0\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AKU_Arthitecture_v.1.0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: AKU_Arthitecture_v.1.0.0.elf
- 
-arm-none-eabi-size   AKU_Arthitecture_v.1.0.0.elf 
-arm-none-eabi-objdump -h -S  AKU_Arthitecture_v.1.0.0.elf  > "AKU_Arthitecture_v.1.0.0.list"
-   text	   data	    bss	    dec	    hex	filename
-  48904	    192	  48952	  98048	  17f00	AKU_Arthitecture_v.1.0.0.elf
-Finished building: default.size.stdout
- 
-Finished building: AKU_Arthitecture_v.1.0.0.list
+Finished building: AKU2_GroundTest1_TARDIS2.list
  

@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Barometer_Device"/>
+		<item key="selection" value="htim2"/>
 		<list key="findhistory">
+			<item value="htim3"/>
+			<item value="o"/>
 			<item value="Altimeter_Device"/>
 			<item value="config_altimeter"/>
 			<item value="read_altimeter_data"/>
@@ -22,6 +24,7 @@
 			<item value="y"/>
 		</list>
 		<list key="replacehistory">
+			<item value="htim2"/>
 			<item value="Barometer_Device"/>
 			<item value="config_barometer"/>
 			<item value="read_barometer_data"/>
