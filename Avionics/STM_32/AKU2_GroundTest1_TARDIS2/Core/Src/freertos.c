@@ -256,7 +256,7 @@ void Buzzer_Task_Entry(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  buzzer_OK();
+	  //buzzer_OK();
     osDelay(1);
   }
   /* USER CODE END Buzzer_Task_Entry */
@@ -277,7 +277,7 @@ void Data_Log_Task_Entry(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  void write_SD();
+	  write_SD();
     osDelay(1);
   }
   /* USER CODE END Data_Log_Task_Entry */

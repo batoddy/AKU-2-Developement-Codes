@@ -6,8 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="htim2"/>
+		<item key="selection" value="SD"/>
 		<list key="findhistory">
+			<item value="sd"/>
+			<item value="SDFile"/>
+			<item value="SDFile_"/>
+			<item value="SDFatFs"/>
+			<item value="SDFatFs_"/>
+			<item value="fccData_str"/>
 			<item value="htim3"/>
 			<item value="o"/>
 			<item value="Altimeter_Device"/>
@@ -17,13 +23,12 @@
 			<item value="empty_barometer_registers"/>
 			<item value="USE_OS_DELAY"/>
 			<item value="get_imu_data"/>
-			<item value="bno055_getSystemStatus"/>
-			<item value="set_off"/>
-			<item value="set"/>
-			<item value="accel"/>
-			<item value="y"/>
 		</list>
 		<list key="replacehistory">
+			<item value="SDFile_"/>
+			<item value="SDFile"/>
+			<item value="SDFatFs_"/>
+			<item value=""/>
 			<item value="htim2"/>
 			<item value="Barometer_Device"/>
 			<item value="config_barometer"/>

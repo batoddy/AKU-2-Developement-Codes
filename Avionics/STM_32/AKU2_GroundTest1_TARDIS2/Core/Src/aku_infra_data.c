@@ -10,7 +10,7 @@
 #include "string.h"
 
 
-char fccData_str[100];
+char *fccData_str = "Hello\n";
 
 IMU *imu_data;
 Altitude *altitude_data;
@@ -54,33 +54,38 @@ void get_data(IMU * imu_ptr, Altitude* altitude_ptr,ServoAngle *srv_angle_ptr){
 #if USE_SD == 1
 	#include "ff.h"
 	#include "fatfs.h"
-	FATFS *FatFs;
-
+	// FATFS SDFatFs_;
+	//FIL SDFile;
 
 	char path[20] = "fcc.txt";
 	FRESULT fresult ;
+	uint8_t wtext[] = "STM32 FATFS works great!"; /* File write buffer */
 	UINT br, bw;
 
 	void init_SD(){
-		FIL fil;
-		fresult  = f_mount(FatFs, (TCHAR const *)SDPath, 1);
+
+		fresult  = f_mount(&SDFatFS, (TCHAR const *)SDPath, 1);
 		if (fresult  != FR_OK){
 			/* Mount err*/
 		}
-		fresult = f_open(&fil, path, FA_WRITE | FA_OPEN_ALWAYS);
+		fresult = f_open(&SDFile, "FCC.txt", FA_CREATE_ALWAYS | FA_WRITE);
 		if (fresult != FR_OK){
 			/* File create err*/
 		}
-		f_close(&fil);
+		sprintf(fccData_str,"135");
+		fresult = 10;
+		fresult = f_write(&SDFile, fccData_str, strlen((char *)fccData_str), (void *)&bw);
+		fresult = 10;
+		fresult = f_close(&SDFile);
+
 	}
 
 	void write_SD(){
-		FIL fil;
-		fresult = f_open(&fil, path, FA_WRITE | FA_OPEN_ALWAYS);
+		fresult = f_open(&SDFile, "FCC.txt", FA_WRITE | FA_OPEN_ALWAYS);
+		fresult = f_lseek(&SDFile, f_size(&SDFile));
+		fresult = f_write(&SDFile, fccData_str, strlen((char *)fccData_str),  (void *)&bw);
 
-		fresult = f_write(&fil, fccData_str, strlen(fccData_str), &bw);
-
-		f_close(&fil);
+		f_close(&SDFile);
 	}
 
 #endif

@@ -90,7 +90,6 @@ void read_imu_data(IMU *imu_data) // write read data from imu func.
 
 //==================== IMU SPECIFIED FUNCS ====================//
 
-
 // --------------------- USER CODE 1 END -----------------------
 //--------------------------------------------------------------
 //--------------------------------------------------------------
@@ -142,8 +141,8 @@ IMU *read_IMU()
 	imu.accel.resultant = sqrt(pow(imu.accel.x, 2) + pow(imu.accel.y, 2) + pow(imu.accel.z, 2));
 
 	// not working well
-//	imu.z_velocity += (imu.accel.z + imu.prev_accel.z)/((imu.tick-imu.prev_tick)/1000);
-//	imu.z_displacement += (imu.z_velocity + imu.prev_z_velocity)/((imu.tick-imu.prev_tick)/1000);
+	//	imu.z_velocity += (imu.accel.z + imu.prev_accel.z)/((imu.tick-imu.prev_tick)/1000);
+	//	imu.z_displacement += (imu.z_velocity + imu.prev_z_velocity)/((imu.tick-imu.prev_tick)/1000);
 
 	return (&imu);
 }
@@ -203,7 +202,7 @@ uint8_t check_imu_connection()
 	uint8_t id;
 	imu_read_register(bno055.chip_id_reg, &id, 1);
 	return id;
-	//return (id == bno055.chip_id) ? DEV_OK : DEV_ERR;
+	// return (id == bno055.chip_id) ? DEV_OK : DEV_ERR;
 }
 
 uint8_t check_imu_status()
