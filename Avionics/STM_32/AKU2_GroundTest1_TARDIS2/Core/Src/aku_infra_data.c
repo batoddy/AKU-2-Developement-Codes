@@ -10,16 +10,16 @@
 #include "string.h"
 
 
-char *fccData_str = "Hello\n";
 
-IMU *imu_data;
-Altitude *altitude_data;
-ServoAngle *srv_angle_data;
+
+IMU *imu_data_ptr;
+Altitude *altitude_data_ptr;
+ServoAngle *srv_angle_data_ptr;
 
 void get_data(IMU * imu_ptr, Altitude* altitude_ptr,ServoAngle *srv_angle_ptr){
-	imu_data = imu_ptr;
-	altitude_data = altitude_data;
-	srv_angle_data = srv_angle_ptr;
+	imu_data_ptr = imu_ptr;
+	altitude_data_ptr = altitude_ptr;
+	srv_angle_data_ptr = srv_angle_ptr;
 	return;
 }
 
@@ -30,7 +30,7 @@ void get_data(IMU * imu_ptr, Altitude* altitude_ptr,ServoAngle *srv_angle_ptr){
 
 	void transmit_usb_data_eulerNservo(){
 
-		sprintf(usb_data,"Yaw:%.2f, Pitch:%.2f, Roll:%.2f T:%lu || S1:%.2f, S2:%.2f, T:%lu",imu_data->euler.yaw,imu_data->euler.pitch,imu_data->euler.roll,imu_data->dataflow_rate,srv_angle_data->srv1,srv_angle_data->srv2,imu_data->servo_delta);
+		sprintf(usb_data,"Yaw:%.2f, Pitch:%.2f, Roll:%.2f T:%lu || S1:%.2f, S2:%.2f, T:%lu",imu_data_ptr->euler.yaw,imu_data_ptr->euler.pitch,imu_data_ptr->euler.roll,imu_data_ptr->dataflow_rate,srv_angle_data_ptr->srv1,srv_angle_data_ptr->srv2,imu_data_ptr->servo_delta);
 		CDC_Transmit_FS(usb_data, strlen(usb_data));
 	}
 #endif
@@ -57,9 +57,9 @@ void get_data(IMU * imu_ptr, Altitude* altitude_ptr,ServoAngle *srv_angle_ptr){
 	// FATFS SDFatFs_;
 	//FIL SDFile;
 
-	char path[20] = "fcc.txt";
+	char fccSD_str [200] = "DATA ERR!!!";
 	FRESULT fresult ;
-	uint8_t wtext[] = "STM32 FATFS works great!"; /* File write buffer */
+	uint8_t sd_init_txt[200]; /* File write buffer */
 	UINT br, bw;
 
 	void init_SD(){
@@ -68,22 +68,24 @@ void get_data(IMU * imu_ptr, Altitude* altitude_ptr,ServoAngle *srv_angle_ptr){
 		if (fresult  != FR_OK){
 			/* Mount err*/
 		}
-		fresult = f_open(&SDFile, "FCC.txt", FA_CREATE_ALWAYS | FA_WRITE);
+		fresult = f_open(&SDFile, "FCC.csv", FA_CREATE_NEW | FA_WRITE);
 		if (fresult != FR_OK){
 			/* File create err*/
 		}
-		sprintf(fccData_str,"135");
-		fresult = 10;
-		fresult = f_write(&SDFile, fccData_str, strlen((char *)fccData_str), (void *)&bw);
-		fresult = 10;
+		sprintf(sd_init_txt,"IMU_timestamp,AccelX,AccelY,AccelZ,AccelRes,GyroX,GyroY,GyroZ,Yaw,Pitch,Roll,imuDataflow,Srv1Angle,Srv2Angle,SrvControlRate\n");
+
+		fresult = f_write(&SDFile, sd_init_txt, strlen((char *)sd_init_txt), (void *)&bw);
+
 		fresult = f_close(&SDFile);
 
 	}
 
 	void write_SD(){
-		fresult = f_open(&SDFile, "FCC.txt", FA_WRITE | FA_OPEN_ALWAYS);
+		sprintf(fccSD_str,"%d,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%lu,%f,%f,%lu\n",imu_data_ptr->prev_tick,imu_data_ptr->accel.x,imu_data_ptr->accel.y,imu_data_ptr->accel.z,imu_data_ptr->accel.resultant,imu_data_ptr->gyro.x,imu_data_ptr->gyro.y,imu_data_ptr->gyro.z,imu_data_ptr->euler.yaw,imu_data_ptr->euler.pitch,imu_data_ptr->euler.roll,imu_data_ptr->dataflow_rate,srv_angle_data_ptr->srv1,srv_angle_data_ptr->srv2,srv_angle_data_ptr->control_rate);
+
+		fresult = f_open(&SDFile, "FCC.csv", FA_OPEN_EXISTING | FA_WRITE);
 		fresult = f_lseek(&SDFile, f_size(&SDFile));
-		fresult = f_write(&SDFile, fccData_str, strlen((char *)fccData_str),  (void *)&bw);
+		fresult = f_write(&SDFile, fccSD_str, strlen((char *)fccSD_str),  (void *)&bw);
 
 		f_close(&SDFile);
 	}

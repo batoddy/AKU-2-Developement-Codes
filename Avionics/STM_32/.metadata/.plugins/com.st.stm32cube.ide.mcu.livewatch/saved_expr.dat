@@ -6,4 +6,8 @@ usb_data
 srv_angle_ptr
 velocity
 fresult
-bw
+ctr
+state
+count
+can_ok_count
+can_res

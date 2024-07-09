@@ -87,7 +87,7 @@ class SerialApp:
             self.ser = serial.Serial("COM6", 115200)
         except:
             print("Port can't opened!!!")
-            sys.exit()
+            # sys.exit()
 
     def readSerialData(self):
         try:
